@@ -8,10 +8,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wangxz.controller</groupId>
-    <artifactId>wangxz-blog-turbine</artifactId>
+    <artifactId>wangxz-blog-base</artifactId>
     <packaging>jar</packaging>
 
-    <name>wangxz-blog-turbine</name>
+    <name>wangxz-blog-base</name>
     <url>http://maven.apache.org</url>
 
     <properties>
