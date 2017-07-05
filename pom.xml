@@ -9,6 +9,11 @@
     <module>wangxz-blog-gateway</module>
     <module>wangxz-blog-web</module>
     <module>wangxz-blog-admin</module>
+    <module>wangxz-blog-registry</module>
+    <module>wangxz-blog-config</module>
+    <module>wangxz-blog-schedule</module>
+    <module>wangxz-blog-zipkin</module>
+    <module>wangxz-blog-turbine</module>
   </modules>
   <packaging>pom</packaging>
 
