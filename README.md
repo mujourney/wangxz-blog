@@ -1,2 +1,2 @@
 # wangxz-blog
-博客
+一个博客
