@@ -1,0 +1,22 @@
+#配置中心
+spring:
+  application:
+    name: registry-server
+  cloud:
+    config:
+       server:
+         git:
+           uri: https://github.com/mujourney/wangxz-blog-config
+           username: 769165836@qq.com
+           password: WXZ19960706wxz
+server:
+  port: 2222
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:${server.port}/eureka/
+  instance:
+    prefer-ip-address: true #注册时使用ip地址
+
+
