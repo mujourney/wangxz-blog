@@ -10,7 +10,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * @Created By: 2017/7/18 下午4:56
  * @Descripyion: 配置中心启动类
  */
-@EnableConfigServer
+
 @EnableDiscoveryClient
 @SpringBootApplication
 public class ConfigMain {
