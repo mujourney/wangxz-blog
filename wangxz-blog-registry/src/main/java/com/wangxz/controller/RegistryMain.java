@@ -10,7 +10,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * @Created By: 2017/7/18 下午4:19
  * @Descripyion: 注册中心
  */
-@EnableDiscoveryClient
+@EnableEurekaServer
 @SpringBootApplication
 public class RegistryMain {
     public static void main(String[] args) {

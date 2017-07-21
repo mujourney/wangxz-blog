@@ -1,20 +1,19 @@
 package com.wangxz;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
+
 /**
- * @Description：网关gateway
- * @Author:wangxiaozhong@winchannel.net
- * @Created:2017/07/11 下午3:31
- * @Modified By:
+ * @Author: wangxz
+ * @Created By: 2017/7/18 下午4:37
+ * @Descripyion: 后台管理系统启动类
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class GatewayMain {
+public class AdminMain {
     public static void main(String[] args) {
-        SpringApplication.run(GatewayMain.class, args);
+        SpringApplication.run(AdminMain.class, args);
     }
 
 }
