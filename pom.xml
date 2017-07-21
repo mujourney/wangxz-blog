@@ -14,7 +14,7 @@
         <module>wangxz-blog-schedule</module>
         <module>wangxz-blog-base</module>
         <module>wangxz-blog-common</module>
-        <module>wagxz-blog-turbine</module>
+        <module>wangxz-blog-turbine</module>
         <module>wangxz-blog-zipkin</module>
     </modules>
     <packaging>pom</packaging>
