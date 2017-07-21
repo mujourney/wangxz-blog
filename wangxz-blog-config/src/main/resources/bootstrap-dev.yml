@@ -7,8 +7,8 @@ spring:
        server:
          git:
            uri: https://github.com/mujourney/wangxz-blog/
-           username: 769165836@qq.com
-           password: WXZ19960706wxz
+           username: XXXX
+           password: XXXX
            search-paths: config
 
 server:
