@@ -29,4 +29,3 @@ logs/
 .DS_Store
 Thumbs.db
 
-wangxz-blog-config/src/main/resources/bootstrap-dev.yml
