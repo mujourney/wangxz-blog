@@ -1,7 +1,9 @@
-package com.wangxz;
+package com;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.ComponentScan;
 
 
 /**
@@ -10,6 +12,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @Descripyion: 后台管理系统启动类
  */
 @EnableDiscoveryClient
+@ComponentScan(basePackages = { "com.wangxz" })
+//@ImportResource(locations={"classpath:applicationContext.xml"})
+@MapperScan("com.wangxz.dao")
 @SpringBootApplication
 public class AdminMain {
     public static void main(String[] args) {
