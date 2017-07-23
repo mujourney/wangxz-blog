@@ -15,20 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 public class TestController {
-    @Value("${name}")
-    public String name;
     @Autowired
     TestService testService;
 
-    @RequestMapping("/sss")
-    public String tet() {
-        return name;
-    }
 
     @RequestMapping("/test")
     public String test() {
         testService.test();
-        return name;
+        return "aaa";
     }
 
 

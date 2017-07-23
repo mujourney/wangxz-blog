@@ -15,4 +15,4 @@ management:
 
 mybatis:
   config-location: classpath:/mybatis-config.xml
-  mapper-locations: classpath*:com/gd/dao/**.xml
+  mapper-locations: classpath*:com/wangxz/dao/**.xml
