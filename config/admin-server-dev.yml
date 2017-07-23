@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://XXX:3306/blog?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false
-    username: XXX
-    password: XXX
+    url: jdbc:mysql://123.206.93.191:3306/blog?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false
+    username: root
+    password: mujourney
     driver-class-name: com.mysql.jdbc.Driver
     type: com.zaxxer.hikari.HikariDataSource
   jackson:
