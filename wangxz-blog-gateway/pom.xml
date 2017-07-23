@@ -27,8 +27,6 @@
         </dependency>
 
 
-
-
         <!--  springboot web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -44,18 +42,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
+        <!-- 注册中心 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>com.wangxz</groupId>
-            <artifactId>wangxz-blog-fegin</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
 
     </dependencies>
 </project>
