@@ -7,11 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wangxz.controller</groupId>
-    <artifactId>wangxz-blog-web</artifactId>
+    <artifactId>wangxz-blog-fegin</artifactId>
     <packaging>jar</packaging>
 
-    <name>wangxz-blog-web</name>
+    <name>wangxz-blog-fegin</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,8 +18,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>
     </dependencies>
 </project>

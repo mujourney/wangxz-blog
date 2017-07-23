@@ -1,5 +1,7 @@
 package com.wangxz.controller;
 
+import com.wangxz.service.DemoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,12 +17,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/user")
 public class LoginController {
 
-    @Value("${name}")
-    private String name;
+    @Autowired
+    DemoService demoService;
+
 
     @RequestMapping("/login")
     @ResponseBody
-    public String user4Login(){
-        return  name;
+    public String user4Login() {
+        demoService.test();
+        return "aaaa";
     }
 }

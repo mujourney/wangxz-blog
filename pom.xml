@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wangxz.controller</groupId>
+    <groupId>com.wangxz</groupId>
     <artifactId>wangxz-blog</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -16,6 +16,7 @@
         <module>wangxz-blog-common</module>
         <module>wangxz-blog-turbine</module>
         <module>wangxz-blog-zipkin</module>
+        <module>wangxz-blog-fegin</module>
     </modules>
     <packaging>pom</packaging>
     <name>wangxz-blog</name>
@@ -114,4 +115,20 @@
         </profile>
     </profiles>
 
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
 </project>
