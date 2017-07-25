@@ -1,4 +1,4 @@
-package com.wangxz.controller;
+package com.wangxz;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

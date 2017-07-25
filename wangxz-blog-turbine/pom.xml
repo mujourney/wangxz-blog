@@ -7,7 +7,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wangxz.controller</groupId>
     <artifactId>wangxz-blog-turbine</artifactId>
     <packaging>jar</packaging>
 

@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 
 /**
  * @Description：网关gateway
@@ -13,6 +14,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
  */
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = { "com.wangxz.fegin" })
+@EnableAuthorizationServer
 @SpringBootApplication
 public class GatewayMain {
     public static void main(String[] args) {

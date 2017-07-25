@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @Modified By:
  */
 @Controller
-@RequestMapping("/user")
 public class LoginController {
 
     @Autowired
@@ -25,6 +24,20 @@ public class LoginController {
     @ResponseBody
     public String user4Login() {
         demoService.test();
-        return "aaaa";
+        return "1";
+    }
+
+    @RequestMapping("/login1")
+    @ResponseBody
+    public String user4Login1() {
+        demoService.test();
+        return "2";
+    }
+
+    @RequestMapping("/login2")
+    @ResponseBody
+    public String user4Login2() {
+        demoService.test();
+        return "3";
     }
 }
