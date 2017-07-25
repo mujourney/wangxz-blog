@@ -18,6 +18,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .csrf().disable() // 禁用CSRF保护
                 .authorizeRequests()
                 .antMatchers("/login").permitAll()
                 .anyRequest().authenticated()
@@ -35,5 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth
                 .inMemoryAuthentication()
                 .withUser("user").password("password").roles("USER");
+        // 自定义UserDetailsService，用于获取UserDetails对象
+//        auth.userDetailsService(new CustomUserDetailsService());
     }
 }
