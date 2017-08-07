@@ -9,18 +9,21 @@ spring:
         enabled: true  # 默认false，设为true表示使用注册中心中的configserver配置而不自己配置configserver的uri
         service-id: config-server  # 指定config server在服务发现中的serviceId，默认为：configserver
 
-
 server:
   port: 5555
+  context-path: /admin
+  use-forward-headers: false
 
 management:
   security:
     enabled: false
 
+# Eureka配置
 eureka:
+  instance:
+    hostname: localhost
+    port: 10000
+#    prefer-ip-address: true #注册时使用ip地址
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:1111/eureka/
-  instance:
-    prefer-ip-address: true #注册时使用ip地址
-
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
