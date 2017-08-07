@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RefreshScope
+
 public class TestController {
     @Autowired
     TestService testService;
@@ -24,6 +25,4 @@ public class TestController {
         testService.test();
         return "aaa";
     }
-
-
 }
