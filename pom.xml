@@ -17,6 +17,7 @@
         <module>wangxz-blog-zipkin</module>
         <module>wangxz-blog-fegin</module>
         <module>wangxz-blog-turbine</module>
+        <module>wangxz-blog-security</module>
     </modules>
     <packaging>pom</packaging>
     <name>wangxz-blog</name>

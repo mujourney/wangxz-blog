@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: security-service
+
+# 服务端口
+server:
+  port: 8002
+  # 设置作用域
+  context-path: /uaa
+  use-forward-headers: false
+
+# Eureka配置
+eureka:
+  instance:
+    hostname: localhost
+    port: 1111
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+
+# security验证配置
+com.wangxz.security:
+  basic:
+    enabled: false
+  user:
+    # 设置默认密码
+    password: password
+  # 对下面文件忽略验证
+  ignored: /css/**,/js/**,/favicon.ico
+
+logging:
+  level.org.springframework.com.wangxz.security: DEBUG
