@@ -1,4 +1,4 @@
-package com.wangxz.controller;
+package com.wangxz.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -50,7 +50,8 @@ public class UaaSecurityConfig extends WebMvcConfigurerAdapter {
      */
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/login").setViewName("login");
+//        registry.addViewController("/login").setViewName("login");
+        // zzmar:使用Controller进行Login处理，移除该行
         registry.addViewController("/oauth/confirm_access").setViewName("authorize");
     }
 
@@ -80,9 +81,11 @@ public class UaaSecurityConfig extends WebMvcConfigurerAdapter {
          */
         @Override
         protected void configure(HttpSecurity http) throws Exception {
-            http.formLogin().loginPage("/login").permitAll()
+            http.formLogin().loginPage("/login")//.permitAll() zzmar: 这么使用会导致无法识别get参数，改用下面的方法
                     .and()
-                    .authorizeRequests().anyRequest().authenticated()
+                    .authorizeRequests()
+                    .antMatchers( "/login").permitAll() // 对login地址放行(只放行login，不包含子地址)
+                    .anyRequest().authenticated()
                     .and()
                     // 登出设置
                     .logout().deleteCookies("JSESSIONID").invalidateHttpSession(true).logoutSuccessUrl("/login?logout");
