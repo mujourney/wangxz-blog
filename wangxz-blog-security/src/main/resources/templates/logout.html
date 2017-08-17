@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form id="l" th:action="@{/logout}" method="post">
+    <input type="hidden" id="csrf_token" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+</form>
+
+<script language="JavaScript">
+    console.log('submit');
+    document.getElementById('l').submit();
+</script>
+</body>
+</html>

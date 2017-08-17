@@ -80,8 +80,12 @@ public class UaaSecurityConfig extends WebMvcConfigurerAdapter {
          */
         @Override
         protected void configure(HttpSecurity http) throws Exception {
-            http.formLogin().loginPage("/login").permitAll().and().authorizeRequests()
-                    .anyRequest().authenticated();
+            http.formLogin().loginPage("/login").permitAll()
+                    .and()
+                    .authorizeRequests().anyRequest().authenticated()
+                    .and()
+                    // 登出设置
+                    .logout().deleteCookies("JSESSIONID").invalidateHttpSession(true).logoutSuccessUrl("/login?logout");
         }
 
         // 用户信息供应商

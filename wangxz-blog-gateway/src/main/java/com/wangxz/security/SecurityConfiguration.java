@@ -62,8 +62,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .addFilterAfter(csrfHeaderFilter(), CsrfFilter.class)
                 .addFilterAfter(oAuth2AuthenticationProcessingFilter(), AbstractPreAuthenticatedProcessingFilter.class)
-                .logout().permitAll()
-                .logoutSuccessUrl("/");
+                // 登出，因为登出需要post至 /louout 并且uaa和zuul需要分别登出(因为有两个SessionID)，所以这里指向uaa的登出接口
+                .logout().deleteCookies("JSESSIONID").invalidateHttpSession(true).logoutSuccessUrl("/uaa/logout");
     }
 
     private OAuth2AuthenticationProcessingFilter oAuth2AuthenticationProcessingFilter() {
