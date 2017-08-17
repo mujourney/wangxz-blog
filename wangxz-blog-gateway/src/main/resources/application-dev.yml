@@ -4,6 +4,14 @@ server:
 spring:
   application:
     name: gateway-server
+  # thymeleaf start
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    # 开发时关闭缓存
+    cache: false
+  # thymeleaf end
 #  cloud:
 #    Oauth2Config:
 #      profile: dev
@@ -40,7 +48,7 @@ security:
       loginPath: /login
     # 客户端信息
     client:
-      accessTokenUri: http://com.wangxz.security-service/uaa/oauth/token
+      accessTokenUri: http://security-service/uaa/oauth/token
       userAuthorizationUri: /uaa/oauth/authorize
       clientId: acme
       clientSecret: acmesecret

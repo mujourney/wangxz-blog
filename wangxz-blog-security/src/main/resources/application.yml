@@ -1,6 +1,14 @@
 spring:
   application:
     name: security-service
+  # thymeleaf start
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    # 开发时关闭缓存
+    cache: false
+  # thymeleaf end
 
 # 服务端口
 server:
